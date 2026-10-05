@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
+  <title>子公司績效考核自評門戶 | 2026 年度員工工作表現評核</title>
+  <meta name="description" content="感謝你在過去一年中為公司的付出。為了更全面了解你的工作表現，並為你提供更具針對性的發展建議，請於 11/30 前完成此份績效考核自評表。">
+  <meta name="keywords" content="績效考核, 自評表, SurveyCake, 年度考績, OKR, 員工評核, 子公司考核">
+  
+  <!-- Open Graph / Social Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="子公司績效考核自評門戶 » SurveyCake 串接">
+  <meta property="og:description" content="感謝你在過去一年中為公司的付出。認真、客觀地對照工作目標，對自己的工作表現進行評價，讓我們共同描繪未來成長藍圖。">
+  <meta property="og:url" content="https://www.surveycake.com/s/w3r4q">
+  
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Ambient Light Sphere Canvas Background -->
+  <div class="bg-ambient" aria-hidden="true">
+    <div class="ambient-orb orb-1"></div>
+    <div class="ambient-orb orb-2"></div>
+    <div class="ambient-orb orb-3"></div>
+  </div>
+
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="#" class="nav-brand">
+        <div class="brand-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+          </svg>
+        </div>
+        <span>PA System Portal</span>
+      </a>
+
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#overview" class="nav-link">考核簡介</a></li>
+          <li><a href="#dimensions" class="nav-link">評核維度</a></li>
+          <li><a href="#checklist" class="nav-link">自評準備</a></li>
+          <li><a href="#survey-hub" class="nav-link">問卷入口</a></li>
+          <li><a href="#timeline" class="nav-link">評核時程</a></li>
+          <li><a href="#faq" class="nav-link">常見問題</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button id="theme-toggle-btn" class="btn-icon" aria-label="切換深淺色外觀" title="切換深淺色外觀">
+          <span id="theme-icon">☀️</span>
+        </button>
+        <a href="https://www.surveycake.com/s/w3r4q" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm btn-shimmer">
+          <span>填寫自評表</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="overview">
+    <div class="container hero-content">
+      <div class="badge">
+        <span class="badge-pulse"></span>
+        2026 年度子公司全員自評正式啟動
+      </div>
+
+      <h1 class="hero-title">
+        審視年度成果，<br>
+        攜手勾勒<span class="gradient-text">成長願景</span>
+      </h1>
+
+      <p class="hero-subtitle">
+        感謝你在過去一年中為公司的卓越付出。為了更全面了解你的工作表現與貢獻，並為你提供更具針對性的個人職涯發展建議，請認真、客觀地對照工作目標進行自評回饋。
+      </p>
+
+      <!-- Countdown Component -->
+      <div class="countdown-wrapper">
+        <div class="countdown-info">
+          <div class="label">⏰ 截止倒數時間</div>
+          <div class="deadline">2026/11/30 (一) 23:59 截止</div>
+        </div>
+
+        <div class="countdown-grid">
+          <div class="countdown-box">
+            <span class="countdown-val" id="count-days">00</span>
+            <span class="countdown-lbl">Days</span>
+          </div>
+          <span class="countdown-divider">:</span>
+          <div class="countdown-box">
+            <span class="countdown-val" id="count-hours">00</span>
+            <span class="countdown-lbl">Hours</span>
+          </div>
+          <span class="countdown-divider">:</span>
+          <div class="countdown-box">
+            <span class="countdown-val" id="count-minutes">00</span>
+            <span class="countdown-lbl">Mins</span>
+          </div>
+          <span class="countdown-divider">:</span>
+          <div class="countdown-box">
+            <span class="countdown-val" id="count-seconds">00</span>
+            <span class="countdown-lbl">Secs</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Call-to-actions -->
+      <div class="hero-cta-group">
+        <a href="https://www.surveycake.com/s/w3r4q" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg btn-shimmer">
+          <span>新分頁開啟 SurveyCake 表單</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+        </a>
+
+        <button type="button" class="btn btn-secondary btn-lg" data-open-modal>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="9" y1="3" x2="9" y2="21"/></svg>
+          <span>在頁面內直接填寫</span>
+        </button>
+      </div>
+
+      <!-- Quick Metrics -->
+      <div class="metrics-row">
+        <div class="metric-pill">
+          <div class="metric-icon">⏱️</div>
+          <div>
+            <div class="metric-title">預估填答時間</div>
+            <div class="metric-value">約 10 ~ 15 分鐘</div>
+          </div>
+        </div>
+
+        <div class="metric-pill">
+          <div class="metric-icon">🔒</div>
+          <div>
+            <div class="metric-title">資料安全機制</div>
+            <div class="metric-value">高規格隱私與保密承諾</div>
+          </div>
+        </div>
+
+        <div class="metric-pill">
+          <div class="metric-icon">💬</div>
+          <div>
+            <div class="metric-title">後續流程</div>
+            <div class="metric-value">直屬主管 1-on-1 雙向面談</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Dimensions Section -->
+  <section id="dimensions">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Evaluation Framework</span>
+        <h2 class="section-title">四大核心評核維度</h2>
+        <p class="section-desc">我們秉持公開透明、客觀公平的指標，全方位衡量個人實質成果、專業能力與團隊價值。</p>
+      </div>
+
+      <div class="dimensions-grid">
+        <!-- Dimension 1 -->
+        <div class="glass-card dimension-card dim-card-1">
+          <div class="dimension-header">
+            <div class="dim-icon-wrap">🎯</div>
+            <span class="dim-weight">維度 01</span>
+          </div>
+          <h3 class="dim-title">目標與成果達成</h3>
+          <p class="dim-desc">對照年初設定之工作目標（OKR / KPI），客觀檢視各專案交付品質、時效性與量化業務成果貢獻。</p>
+          <div class="dim-tags">
+            <span class="dim-tag">目標達成率</span>
+            <span class="dim-tag">專案里程碑</span>
+            <span class="dim-tag">業務效益</span>
+          </div>
+        </div>
+
+        <!-- Dimension 2 -->
+        <div class="glass-card dimension-card dim-card-2">
+          <div class="dimension-header">
+            <div class="dim-icon-wrap">💡</div>
+            <span class="dim-weight">維度 02</span>
+          </div>
+          <h3 class="dim-title">專業職能與創新</h3>
+          <p class="dim-desc">評估在專業領域的技術精進、解決複雜問題的能力，以及針對既有流程提出突破性優化與創新提案。</p>
+          <div class="dim-tags">
+            <span class="dim-tag">專業技能深度</span>
+            <span class="dim-tag">問題解決</span>
+            <span class="dim-tag">流程革新</span>
+          </div>
+        </div>
+
+        <!-- Dimension 3 -->
+        <div class="glass-card dimension-card dim-card-3">
+          <div class="dimension-header">
+            <div class="dim-icon-wrap">🤝</div>
+            <span class="dim-weight">維度 03</span>
+          </div>
+          <h3 class="dim-title">團隊協作與當責文化</h3>
+          <p class="dim-desc">跨部門溝通的順暢度、支援夥伴的積極度、組織文化實踐，以及面對突發挑戰時的主動擔當。</p>
+          <div class="dim-tags">
+            <span class="dim-tag">跨組溝通</span>
+            <span class="dim-tag">當責精神</span>
+            <span class="dim-tag">團隊合作</span>
+          </div>
+        </div>
+
+        <!-- Dimension 4 -->
+        <div class="glass-card dimension-card dim-card-4">
+          <div class="dimension-header">
+            <div class="dim-icon-wrap">🚀</div>
+            <span class="dim-weight">維度 04</span>
+          </div>
+          <h3 class="dim-title">個人成長與組織反饋</h3>
+          <p class="dim-desc">自我發展潛能評估、未來期望挑戰之任務領域，並對公司整體運作與團隊管理提供建設性建言。</p>
+          <div class="dim-tags">
+            <span class="dim-tag">職涯願景</span>
+            <span class="dim-tag">持續學習</span>
+            <span class="dim-tag">組織建言</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Readiness Checklist Section -->
+  <section id="checklist">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Interactive Preparation</span>
+        <h2 class="section-title">自評準備度檢查清單</h2>
+        <p class="section-desc">在開始填寫 SurveyCake 前，建議先完成以下自我梳理，能讓你的自評內容更具說服力與具體價值。</p>
+      </div>
+
+      <div class="glass-card checklist-container">
+        <div class="progress-header">
+          <div class="progress-title">
+            <span>📋 填寫準備進度</span>
+          </div>
+          <div class="progress-badge" id="checklist-percent-text">0%</div>
+        </div>
+
+        <div class="progress-bar-track">
+          <div class="progress-bar-fill" id="checklist-progress-fill"></div>
+        </div>
+
+        <div class="checklist-items">
+          <!-- Item 1 -->
+          <div class="check-item">
+            <div class="custom-checkbox"></div>
+            <div class="check-content">
+              <h4>已整理過去一年的主要專案與成果數據</h4>
+              <p>例如：完成之專案上線、業績指標成長%、成本節省或效率提升之具體量化指標。</p>
+            </div>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="check-item">
+            <div class="custom-checkbox"></div>
+            <div class="check-content">
+              <h4>已客觀對照年初約定之 OKR / 工作目標</h4>
+              <p>誠實檢視哪些目標已超標達成、哪些項目遭遇阻礙或需在下年度調整資源。</p>
+            </div>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="check-item">
+            <div class="custom-checkbox"></div>
+            <div class="check-content">
+              <h4>已思考未來 1~2 年的個人職涯目標與學習需求</h4>
+              <p>期望涉獵的新技能、有興趣承擔的新挑戰，或是需要的公司培訓資源。</p>
+            </div>
+          </div>
+
+          <!-- Item 4 -->
+          <div class="check-item">
+            <div class="custom-checkbox"></div>
+            <div class="check-content">
+              <h4>已準備對團隊協作或公司流程之具體改善建議</h4>
+              <p>以建設性、積極正向的態度，提出有助於公司提升整體營運效能的真誠觀察。</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="checklist-footer">
+          <div class="unlock-status" id="checklist-status">
+            請點選上方項目進行自我檢視，完成後解鎖最佳填答狀態！
+          </div>
+
+          <a href="https://www.surveycake.com/s/w3r4q" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-lg" id="checklist-cta-btn">
+            <span>前往填寫自評問卷</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Access Hub & SurveyCake Connection Section -->
+  <section id="survey-hub">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Access Hub</span>
+        <h2 class="section-title">多元填寫管道</h2>
+        <p class="section-desc">無論使用電腦、平板或手機，都能享受一致流暢的填答體驗。</p>
+      </div>
+
+      <div class="hub-grid">
+        <!-- Direct Access Card -->
+        <div class="glass-card hub-card">
+          <div>
+            <div class="badge" style="margin-bottom: 1.25rem;">官方 SurveyCake 表單通道</div>
+            <h3 style="font-size: 1.8rem; margin-bottom: 1rem;">子公司績效考核自評表</h3>
+            <p style="color: var(--text-secondary); margin-bottom: 1.75rem; line-height: 1.7;">
+              此份自評表託管於 SurveyCake 專業企業問卷平台。系統支援自動存檔機制，資料傳輸皆經由高強度 SSL 加密防護，請放心依循導引誠懇填答。
+            </p>
+
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+              <a href="https://www.surveycake.com/s/w3r4q" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg btn-shimmer">
+                <span>直接在新視窗開啟表單</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              </a>
+
+              <button type="button" class="btn btn-secondary btn-lg" data-open-modal>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+                <span>彈出內嵌填寫</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="link-copy-box">
+            <input type="text" id="survey-link-input" value="https://www.surveycake.com/s/w3r4q" readonly>
+            <button type="button" class="btn btn-primary btn-sm" id="copy-link-btn">複製連結</button>
+          </div>
+        </div>
+
+        <!-- QR Code Access Card -->
+        <div class="glass-card hub-card hub-card-qr">
+          <div class="badge">手機掃碼填寫</div>
+          <p style="font-size: 0.9rem; color: var(--text-secondary); margin-top: 0.75rem;">
+            使用行動裝置相機掃描下方 QR Code，立即於手機隨時隨地完成自評。
+          </p>
+
+          <div class="qr-display">
+            <!-- Dynamic QR Code rendered via official QuickChart / SVG generator -->
+            <img 
+              src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https%3A%2F%2Fwww.surveycake.com%2Fs%2Fw3r4q&margin=1" 
+              alt="SurveyCake 考核表單 QR Code" 
+              class="qr-code-img"
+              loading="lazy"
+            >
+          </div>
+
+          <p style="font-size: 0.8rem; color: var(--text-muted);">
+            相容 iOS 與 Android 原生相機
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Timeline Section -->
+  <section id="timeline">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Appraisal Roadmap</span>
+        <h2 class="section-title">全年度考核進度時程</h2>
+        <p class="section-desc">掌握每個評核環節的節奏，確保自評、主管面談與發展計畫無縫銜接。</p>
+      </div>
+
+      <div class="timeline-flow">
+        <!-- Step 1 -->
+        <div class="timeline-step active">
+          <div class="step-circle">📝</div>
+          <div class="step-date">即日起 ~ 11/30</div>
+          <h4 class="step-title">員工個人自評</h4>
+          <p class="step-desc">全員完成 SurveyCake 自評表單填寫，客觀記錄工作亮點與改善空間。</p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="timeline-step">
+          <div class="step-circle">🔍</div>
+          <div class="step-date">12/01 ~ 12/15</div>
+          <h4 class="step-title">直屬主管複評</h4>
+          <p class="step-desc">直屬主管根據日常貢獻與目標達成，進行客觀考核與書面評估反饋。</p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="timeline-step">
+          <div class="step-circle">⚖️</div>
+          <div class="step-date">12/16 ~ 12/25</div>
+          <h4 class="step-title">跨部門校準會議</h4>
+          <p class="step-desc">管理層與人資團隊進行跨單位水準校準（Calibration），確保評核公平一致。</p>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="timeline-step">
+          <div class="step-circle">🤝</div>
+          <div class="step-date">01/05 ~ 01/20</div>
+          <h4 class="step-title">1-on-1 雙向面談</h4>
+          <p class="step-desc">主管與同仁進行一對一面談，確認成果反饋，並共同制定下年度個人發展計畫 (IDP)。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section id="faq">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Frequently Asked Questions</span>
+        <h2 class="section-title">常見問題解答</h2>
+        <p class="section-desc">關於本次考核問卷填寫、評分機制與資料保密性的重點說明。</p>
+      </div>
+
+      <div class="glass-card faq-container" style="padding: 1.5rem 2rem;">
+        <!-- FAQ 1 -->
+        <div class="faq-item">
+          <button class="faq-trigger" type="button">
+            <span>Q1. 自評結果會如何影響我的年度考核等級與薪酬調幅？</span>
+            <span class="faq-icon">▾</span>
+          </button>
+          <div class="faq-content">
+            自評表是考核的重要基礎依據。透過對照年初設定的工作目標，自評能讓直屬主管與管理層從你的視角全面檢視各項隱性付出與專案挑戰。自評結果將與主管複評綜合審閱，並在校準會議中客觀確立最終年度績效等第，作為調薪、晉升及年終激勵的重要依據。
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="faq-item">
+          <button class="faq-trigger" type="button">
+            <span>Q2. 提交表單後若發現內容需要增補或修改，可以重新填寫嗎？</span>
+            <span class="faq-icon">▾</span>
+          </button>
+          <div class="faq-content">
+            在截止日（11/30 23:59）前，若需修改內容，可以重新進入 SurveyCake 連結並於備註欄註明「更新版」，系統將以最後一次送出的有效資料為主。若已過截止日，請直接聯繫人力資源部窗口協助處理。
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="faq-item">
+          <button class="faq-trigger" type="button">
+            <span>Q3. 自評問卷的保密性如何？除了直屬主管外還有誰會看到？</span>
+            <span class="faq-icon">▾</span>
+          </button>
+          <div class="faq-content">
+            所有考核自評資料均受公司最高規格保密協定保護。僅有你的直屬考核主管、所屬處級主管及人力資源部考核小組具備檢視權限，絕不對外公開或向同儕披露，請同仁安心、誠實填答。
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="faq-item">
+          <button class="faq-trigger" type="button">
+            <span>Q4. 若過去一年中我有輪調部門或參與跨組專案，該如何填寫？</span>
+            <span class="faq-icon">▾</span>
+          </button>
+          <div class="faq-content">
+            建議在目標成果欄位中，依時間軸分別列出各輪調階段或專案的工作成效，並標註當時的主要專案負責人或協同主管，現任主管將於複評階段向輪調前的主管徵詢回饋，確保每段貢獻都被完整看見。
+          </div>
+        </div>
+
+        <!-- FAQ 5 -->
+        <div class="faq-item">
+          <button class="faq-trigger" type="button">
+            <span>Q5. 對於公司或團隊建議的欄位是必填的嗎？會影響我的考績嗎？</span>
+            <span class="faq-icon">▾</span>
+          </button>
+          <div class="faq-content">
+            建議欄位為選填，但公司非常重視每位夥伴的第一線洞察！無論是流程瓶頸、工具引進或管理回饋，凡具建設性的建言皆受到高度歡迎，絕不會因提出挑戰現況的良性建言而影響個人評核成績。
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal Viewer (SurveyCake In-App Embed) -->
+  <div class="modal-overlay" id="survey-modal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal-container">
+      <div class="modal-header">
+        <div class="modal-title">
+          <span>📋</span>
+          <span>子公司績效考核自評表 (SurveyCake)</span>
+        </div>
+        <div class="modal-actions">
+          <a href="https://www.surveycake.com/s/w3r4q" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm" title="若內嵌受限，可切換至獨立分頁">
+            <span>新分頁開啟</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          </a>
+          <button type="button" class="btn-icon" data-close-modal aria-label="關閉視窗">
+            ✕
+          </button>
+        </div>
+      </div>
+
+      <div class="modal-body">
+        <div class="iframe-loader" id="iframe-loader">
+          <div class="spinner"></div>
+          <p>正在載入 SurveyCake 考核表單，請稍候...</p>
+        </div>
+        <iframe id="survey-iframe" class="modal-iframe" title="SurveyCake 績效考核問卷" allow="camera; microphone; autoplay"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-about">
+          <div class="nav-brand" style="margin-bottom: 0.75rem;">
+            <div class="brand-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+              </svg>
+            </div>
+            <span>子公司績效評核管理系統</span>
+          </div>
+          <p>
+            致力於打造透明、公正、具備成長驅動力的考核文化。讓每一位夥伴的努力皆被肯定，攜手邁向下一個突破性的里程碑。
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">快捷導覽</h4>
+          <ul class="footer-links">
+            <li><a href="#overview" class="footer-link">考核簡介</a></li>
+            <li><a href="#dimensions" class="footer-link">四大維度</a></li>
+            <li><a href="#checklist" class="footer-link">自評檢查清單</a></li>
+            <li><a href="#timeline" class="footer-link">評核時程</a></li>
+            <li><a href="#faq" class="footer-link">常見問題</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">人資協助窗口</h4>
+          <ul class="footer-links">
+            <li style="color: var(--text-secondary); font-size: 0.875rem;">人力資源發展部 (HRD)</li>
+            <li style="color: var(--text-secondary); font-size: 0.875rem;">諮詢信箱：hr-appraisal@company.internal</li>
+            <li style="color: var(--text-secondary); font-size: 0.875rem;">分機窗口：#8821 / #8822</li>
+            <li style="margin-top: 0.5rem;">
+              <a href="https://www.surveycake.com/s/w3r4q" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" style="width: 100%;">
+                立即前往表單
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 子公司績效考核系統 (PA System). 保留一切權利。內部專用資料，嚴禁未授權轉載。</div>
+        <div style="display: flex; gap: 1.5rem;">
+          <span>隱私保密政策</span>
+          <span>評核作業規範</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
