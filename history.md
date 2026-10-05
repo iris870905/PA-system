@@ -1,5 +1,12 @@
 # 版本更新歷程 (Version History & Changelog)
 
+## [v1.2.0] - 2026-10-05
+### SurveyCake 題目頁內直接填答與後台即時收件 (In-Page Live Appraisal Terminal)
+- **核心視窗**：於首頁核心區域打造「線上自評填寫終端 (Live Appraisal Terminal)」，完整於網站中展開 SurveyCake 題目內容。
+- **後台無縫入庫**：由 SurveyCake 原生引擎直接處理作答校驗與「送出」機制，100% 確保 SurveyCake 後台即時收到回覆。
+- **互動控制項**：加入全螢幕專注作答模式（支援 ESC 退出）、重新整理按鈕與安全傳輸標章。
+- **導航升級**：將頂部導覽列、Hero 主按鈕與檢查清單（Checklist）100% 解鎖按鈕全面聯動平滑滾動至終端填答區。
+
 ## [v1.1.0] - 2026-10-05
 ### GitHub 部署與公開發布上線 (GitHub Pages Live)
 - **正式上線**：網站成功託管並發布至 GitHub Pages：`https://iris870905.github.io/PA-system/`。

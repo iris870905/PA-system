@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initTheme();
   initCountdown();
   initChecklist();
+  initAppraisalTerminal();
   initModalViewer();
   initFaqAccordion();
   initCopyLink();
@@ -311,6 +312,71 @@ function initNavbarScroll() {
       link.classList.remove('active');
       if (link.getAttribute('href') === `#${currentId}`) {
         link.classList.add('active');
+      }
+    });
+  });
+}
+
+/* ==========================================================================
+   8. Appraisal Terminal Controls (Fullscreen & Reload)
+   ========================================================================== */
+function initAppraisalTerminal() {
+  const terminalContainer = document.getElementById('terminal-container');
+  const fullscreenBtn = document.getElementById('terminal-fullscreen-btn');
+  const fullscreenText = document.getElementById('fullscreen-text');
+  const reloadBtn = document.getElementById('terminal-reload-btn');
+  const inlineFrame = document.getElementById('inline-survey-frame');
+
+  if (!terminalContainer) return;
+
+  // Fullscreen Toggle
+  if (fullscreenBtn) {
+    fullscreenBtn.addEventListener('click', () => {
+      const isFullscreen = terminalContainer.classList.toggle('fullscreen-mode');
+      if (isFullscreen) {
+        if (fullscreenText) fullscreenText.textContent = '離開全螢幕 (ESC)';
+        document.body.style.overflow = 'hidden';
+        showToast('已進入專注填寫全螢幕模式，可按 ESC 退出');
+      } else {
+        if (fullscreenText) fullscreenText.textContent = '全螢幕專注作答';
+        document.body.style.overflow = '';
+      }
+    });
+  }
+
+  // Escape Key to exit fullscreen
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && terminalContainer.classList.contains('fullscreen-mode')) {
+      terminalContainer.classList.remove('fullscreen-mode');
+      if (fullscreenText) fullscreenText.textContent = '全螢幕專注作答';
+      document.body.style.overflow = '';
+    }
+  });
+
+  // Reload survey frame
+  if (reloadBtn && inlineFrame) {
+    reloadBtn.addEventListener('click', () => {
+      const currentSrc = inlineFrame.src;
+      inlineFrame.src = '';
+      setTimeout(() => {
+        inlineFrame.src = currentSrc || 'https://www.surveycake.com/s/w3r4q';
+        showToast('🔄 表單視窗已重新載入');
+      }, 100);
+    });
+  }
+
+  // Smooth scroll links pointing to #appraisal-terminal
+  const terminalJumpLinks = document.querySelectorAll('a[href="#appraisal-terminal"]');
+  terminalJumpLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      const target = document.getElementById('appraisal-terminal');
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth' });
+        terminalContainer.style.boxShadow = '0 0 60px rgba(6, 182, 212, 0.45)';
+        setTimeout(() => {
+          terminalContainer.style.boxShadow = '';
+        }, 1600);
       }
     });
   });

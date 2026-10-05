@@ -43,7 +43,8 @@
           <li><a href="#overview" class="nav-link">考核簡介</a></li>
           <li><a href="#dimensions" class="nav-link">評核維度</a></li>
           <li><a href="#checklist" class="nav-link">自評準備</a></li>
-          <li><a href="#survey-hub" class="nav-link">問卷入口</a></li>
+          <li><a href="#appraisal-terminal" class="nav-link active">線上填寫</a></li>
+          <li><a href="#survey-hub" class="nav-link">多元管道</a></li>
           <li><a href="#timeline" class="nav-link">評核時程</a></li>
           <li><a href="#faq" class="nav-link">常見問題</a></li>
         </ul>
@@ -53,9 +54,9 @@
         <button id="theme-toggle-btn" class="btn-icon" aria-label="切換深淺色外觀" title="切換深淺色外觀">
           <span id="theme-icon">☀️</span>
         </button>
-        <a href="https://www.surveycake.com/s/w3r4q" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm btn-shimmer">
-          <span>填寫自評表</span>
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+        <a href="#appraisal-terminal" class="btn btn-primary btn-sm btn-shimmer">
+          <span>立即線上填寫</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
         </a>
       </div>
     </div>
@@ -110,15 +111,15 @@
 
       <!-- Hero Call-to-actions -->
       <div class="hero-cta-group">
-        <a href="https://www.surveycake.com/s/w3r4q" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg btn-shimmer">
-          <span>新分頁開啟 SurveyCake 表單</span>
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+        <a href="#appraisal-terminal" class="btn btn-primary btn-lg btn-shimmer">
+          <span>於網站中直接填寫自評表</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
         </a>
 
-        <button type="button" class="btn btn-secondary btn-lg" data-open-modal>
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="9" y1="3" x2="9" y2="21"/></svg>
-          <span>在頁面內直接填寫</span>
-        </button>
+        <a href="https://www.surveycake.com/s/w3r4q" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-lg">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          <span>在新分頁開啟表單</span>
+        </a>
       </div>
 
       <!-- Quick Metrics -->
@@ -287,10 +288,80 @@
             請點選上方項目進行自我檢視，完成後解鎖最佳填答狀態！
           </div>
 
-          <a href="https://www.surveycake.com/s/w3r4q" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-lg" id="checklist-cta-btn">
-            <span>前往填寫自評問卷</span>
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          <a href="#appraisal-terminal" class="btn btn-secondary btn-lg" id="checklist-cta-btn">
+            <span>前往下方直接填寫自評表</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
           </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Live Appraisal Terminal Section (Direct In-Page SurveyCake Form) -->
+  <section id="appraisal-terminal" style="padding-top: 3.5rem;">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Live Appraisal Terminal</span>
+        <h2 class="section-title">線上自評問卷填寫</h2>
+        <p class="section-desc">題目內容已於下方完整展開，請直接在此介面作答。完成後點擊最下方的「送出」，SurveyCake 後台即可即時接收紀錄。</p>
+      </div>
+
+      <!-- The High-Tech Terminal Window -->
+      <div class="terminal-wrapper" id="terminal-container">
+        <!-- Terminal Header Toolbar -->
+        <div class="terminal-header">
+          <div class="terminal-status-group">
+            <div class="terminal-dots">
+              <span class="terminal-dot dot-red"></span>
+              <span class="terminal-dot dot-yellow"></span>
+              <span class="terminal-dot dot-green"></span>
+            </div>
+            <div class="terminal-title">
+              <span>子公司績效考核自評表</span>
+              <span class="terminal-badge">
+                <span class="badge-pulse" style="width: 5px; height: 5px; background: #10b981;"></span>
+                SurveyCake 官方後台已連線
+              </span>
+            </div>
+          </div>
+
+          <div class="terminal-actions">
+            <button type="button" class="terminal-btn" id="terminal-reload-btn" title="重新載入問卷">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg>
+              <span>重新載入</span>
+            </button>
+            <button type="button" class="terminal-btn" id="terminal-fullscreen-btn" title="切換全螢幕專注作答">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/></svg>
+              <span id="fullscreen-text">全螢幕專注作答</span>
+            </button>
+            <a href="https://www.surveycake.com/s/w3r4q" target="_blank" rel="noopener noreferrer" class="terminal-btn" title="若頁面受限可於新分頁開啟">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+              <span>獨立新分頁開啟</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Terminal Body (Iframe) -->
+        <div class="terminal-body">
+          <iframe 
+            id="inline-survey-frame"
+            src="https://www.surveycake.com/s/w3r4q" 
+            class="terminal-iframe"
+            title="子公司績效考核自評表 - SurveyCake 官方表單"
+            allow="camera; microphone; autoplay; encrypted-media"
+            loading="eager"
+          ></iframe>
+        </div>
+
+        <!-- Terminal Footer Notification -->
+        <div class="terminal-footer">
+          <div class="terminal-footer-security">
+            <span>🛡️</span>
+            <span>256-bit SSL 加密防護 ｜ <span class="highlight">送出後直接存檔至 SurveyCake 官方資料庫</span>，無須重複繳交</span>
+          </div>
+          <div>
+            <span>截止時間：2026/11/30 23:59</span>
+          </div>
         </div>
       </div>
     </div>
