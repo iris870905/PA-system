@@ -1,10 +1,11 @@
 # 版本更新歷程 (Version History & Changelog)
 
 ## [v1.1.0] - 2026-10-05
-### GitHub 部署與公開發布支援 (GitHub Pages Ready)
-- **CI/CD 工作流**：新增 `.github/workflows/deploy.yml`，支援 main 分支推播時自動發布至 GitHub Pages。
-- **專案文檔**：新增 `README.md` 與標準 `.gitignore` 檔案。
-- **全域整合**：預備透過 GitHub Pages 建立線上公開訪問網址。
+### GitHub 部署與公開發布上線 (GitHub Pages Live)
+- **正式上線**：網站成功託管並發布至 GitHub Pages：`https://iris870905.github.io/PA-system/`。
+- **儲存庫建立**：於 GitHub 建立公開儲存庫 `iris870905/PA-system` 並推播主分支。
+- **權限與部署優化**：採用 GitHub Pages 原生分支發布架構，無須複雜 Actions Token 即可實現自動同步。
+- **專案文檔**：包含完整 `README.md` 與 `.gitignore`。
 
 ## [v1.0.0] - 2026-10-05
 ### 專案初始化與功能建置
